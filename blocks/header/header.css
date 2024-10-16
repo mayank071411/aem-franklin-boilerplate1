@@ -184,7 +184,7 @@ header nav  {
   visibility: hidden;
 }
 
-header nav[aria-expanded='true']  {
+header nav[aria-expanded='true'] .nav-sections {
   display: block;
   visibility: visible;
   align-self: start;
