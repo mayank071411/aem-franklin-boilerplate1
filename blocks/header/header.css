@@ -190,42 +190,42 @@ header nav[aria-expanded='true'] .nav-sections {
   align-self: start;
 }
 
-header nav  ul {
+header nav .nav-sections ul {
   list-style: none;
   padding-left: 0;
   font-size: var(--body-font-size-s);
 }
 
-header nav  ul>li {
+header nav .nav-sections ul>li {
   font-weight: 500;
 }
 
-header nav  ul>li>ul {
+header nav .nav-sections ul>li>ul {
   margin-top: 0;
 }
 
-header nav  ul>li>ul>li {
+header nav .nav-sections ul>li>ul>li {
   font-weight: 400;
 }
 
 @media (width >=900px) {
-  header nav  {
+  header nav .nav-sections {
     display: block;
     visibility: visible;
     white-space: nowrap;
   }
 
-  header nav[aria-expanded='true']  {
+  header nav[aria-expanded='true'] .nav-sections {
     align-self: unset;
   }
 
-  header nav  .nav-drop {
+  header nav .nav-sections .nav-drop {
     position: relative;
     padding-right: 16px;
     cursor: pointer;
   }
 
-  header nav  .nav-drop::after {
+  header nav .nav-sections .nav-drop::after {
     content: '';
     display: inline-block;
     position: absolute;
@@ -239,29 +239,29 @@ header nav  ul>li>ul>li {
     border-width: 2px 2px 0 0;
   }
 
-  header nav .nav-drop[aria-expanded='true']::after {
+  header nav .nav-sections .nav-drop[aria-expanded='true']::after {
     top: unset;
     bottom: 0.5em;
     transform: rotate(315deg);
   }
 
-  header nav  ul {
+  header nav .nav-sections ul {
     display: flex;
     gap: 24px;
     margin: 0;
   }
 
-  header nav  .default-content-wrapper>ul>li {
+  header nav .nav-sections .default-content-wrapper>ul>li {
     flex: 0 1 auto;
     position: relative;
   }
 
-  header nav  .default-content-wrapper>ul>li>ul {
+  header nav .nav-sections .default-content-wrapper>ul>li>ul {
     display: none;
     position: relative;
   }
 
-  header nav  .default-content-wrapper>ul>li[aria-expanded='true']>ul {
+  header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul {
     display: block;
     position: absolute;
     left: -24px;
@@ -272,7 +272,7 @@ header nav  ul>li>ul>li {
     white-space: initial;
   }
 
-  header nav  .default-content-wrapper>ul>li>ul::before {
+  header nav .nav-sections .default-content-wrapper>ul>li>ul::before {
     content: '';
     position: absolute;
     top: -8px;
@@ -284,7 +284,7 @@ header nav  ul>li>ul>li {
     border-bottom: 8px solid var(--light-color);
   }
 
-  header nav  .default-content-wrapper>ul>li>ul>li {
+  header nav .nav-sections .default-content-wrapper>ul>li>ul>li {
     padding: 8px 0;
   }
 }
