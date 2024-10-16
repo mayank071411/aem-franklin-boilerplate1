@@ -243,42 +243,8 @@
 }
 
  .columns > div > div:nth-child(1).columns-img-col {
-  flex: 1;
+  flex: 4;
   max-width: max-content;
 }
 
- .columns > div > div:nth-child(2) p {
-  border-left: 5px solid var(--background-color-light);
-  padding: .5rem 1rem;
-  height: 90pt;
-  margin-bottom: 15px;
-  cursor: pointer;
-  text-align: left;
-}
-
- .columns > div > div:nth-child(2) p:hover {
-  border-color: var(--background-color-hf);
-  background-color: var(--brand-primary-color);
-}
-
- .columns > div > div:nth-child(2) p a:first-child {
-  color: var(--background-color-hf);
-  padding: 5px;
-  text-transform: uppercase;
-  font-size: var(--body-font-size-m);
-  font-weight: 400;
-  text-decoration: none;
-  display: block;
-  line-height: 28px;
-}
-
- .columns > div > div:nth-child(2) p a:last-child {
-  color: dimgray;
-  text-decoration: none;
-  padding: 5px;
-  text-transform: uppercase;
-  font-size: var(--body-font-size-sm);
-  font-weight: 400;
-  line-height: 5px;
-  display: block;
-}
+ 
