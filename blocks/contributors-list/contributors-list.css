@@ -1,0 +1,104 @@
+.contributors-list-container .default-content-wrapper h1 {
+  font-weight: normal;
+  font-size: var(--font-size-h1);
+  margin-bottom: 25px;
+  margin-top: 1em;
+}
+
+.contributors-list-container .default-content-wrapper h2,
+.contributors-list-container .default-content-wrapper h3 {
+  font-weight: normal;
+  font-size: var(--font-size-h3);
+}
+
+.contributors-list-container .default-content-wrapper h3 {
+  margin-top: 50px;
+}
+
+.contributors-list-container .default-content-wrapper h2::after,
+.contributors-list-container .default-content-wrapper h3::after {
+  content: '';
+  border-bottom: 2px solid var(--brand-primary-color);
+  display: block;
+  padding-top: 8px;
+  width: 84px;
+}
+
+.contributors-list-container .default-content-wrapper p {
+  font-weight: normal;
+  font-size: var(--body-font-size-xs);
+  line-height: 2.5;
+  margin-bottom: 10px;
+}
+
+.contributors-list > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+  grid-gap: 24px;
+}
+
+.contributors-list > ul > li {
+  text-align: center;
+}
+
+.contributors-list .contributors-list-image {
+  line-height: 0;
+}
+
+.contributors-list > ul > li .contributors-list-image img {
+  width: 164px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 50%;
+  height: 164px;
+}
+
+.contributors-list .contributors-list-body {
+  margin: 0;
+}
+
+.contributors-list .contributors-list-body h4 {
+  margin-bottom: 0;
+  margin-top: 12px;
+  font-size: var(--font-size-h4);
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.contributors-list .contributors-list-body h5 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: var(--body-font-size-xs);
+  line-height: 1.5;
+  font-family: var(--body-font-family);
+  margin-top: 6px;
+}
+
+.contributors-list .contributors-list-body p a {
+  background-color: var(--background-color-hf);
+  padding: 10px;
+  margin-top: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contributors-list-container .contributors-list-wrapper:last-child {
+  margin-bottom: 90px;
+}
+
+@media (width >= 767px) {
+  .contributors-list-container .default-content-wrapper h1 {
+    margin-top: 0;
+  }
+}
+
+@media (width >= 900px) {
+  .contributors-list-container .default-content-wrapper h1 {
+    margin-bottom: 45px;
+    margin-top: 0;
+  }
+}
