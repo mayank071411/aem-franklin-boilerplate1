@@ -30,6 +30,35 @@ header nav[aria-expanded='true'] {
   min-height: 100dvh;
 }
 
+header .nav-sign-in {
+  background-color: var(--background-color-hf);
+  padding: 5px;
+  height: 25px;
+}
+
+header .nav-sign-in .default-content-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+header .nav-sign-in .button-container,
+header .nav-sign-in .button-container a {
+  margin: 0;
+  padding: 0;
+}
+
+header .nav-sign-in .button-container a {
+  color: var(--text-color-hf);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: normal;
+  background-color: transparent;
+  line-height: normal;
+}
+
 @media (width >= 900px) {
   header nav {
     display: flex;

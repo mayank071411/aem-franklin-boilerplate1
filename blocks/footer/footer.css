@@ -1,6 +1,80 @@
 footer {
-  background-color: var(--light-color);
+  background-color: var(--background-color-hf);
   font-size: var(--body-font-size-xs);
+  color: var(--text-color-hf);
+}
+
+footer .section .default-content-wrapper p,
+footer .section .default-content-wrapper p a {
+  color: var(--text-color-hf);
+  font-size: var(--body-font-size-sm);
+  font-weight: normal;
+}
+
+footer .button-container p a.button:any-link,
+footer .columns p.button-container a.button:any-link {
+  background-color: transparent;
+  overflow: initial;
+  padding: 0;
+  margin: 0;
+}
+
+footer .button-container .icon-wknd-logo-light,
+footer .button-container .icon-wknd-logo-light img {
+  width: 128px;
+  height: auto;
+  margin-right: 40px;
+}
+
+footer .columns ul {
+  list-style: none;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .columns ul li a {
+  color: var(--text-color-hf);
+  font-size: var(--body-font-size-xs);
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 0 35px 0 0;
+}
+
+footer .columns h5 {
+  font-family: var(--body-font-family);
+  text-transform: uppercase;
+  font-size: var(--body-font-size-s);
+  margin: 0 15px 0 0;
+}
+
+footer .columns.columns-3-cols > div > div:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .columns p.button-container {
+  background-color: var(--text-color-hf);
+  padding: 8px 10px;
+}
+
+footer .columns p.button-container a img {
+  height: 20px;
+  width: 20px;
+}
+
+footer .columns-container {
+  margin-bottom: 50px;
+}
+
+footer .section .default-content-wrapper p {
+  margin: 0 0 10px;
+}
+
+footer .section .default-content-wrapper p a {
+  text-decoration: underline;
 }
 
 footer .footer > div {
@@ -16,5 +90,8 @@ footer .footer p {
 @media (width >= 900px) {
   footer .footer > div {
     padding: 40px 32px 24px;
+  }
+  .columns > div > div:nth-child(1) {
+    flex: 0;
   }
 }
