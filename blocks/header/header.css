@@ -245,23 +245,23 @@ header nav .nav-sections ul>li>ul>li {
     transform: rotate(315deg);
   }
 
-  header nav .nav-sections ul {
+  header nav  ul {
     display: flex;
     gap: 24px;
     margin: 0;
   }
 
-  header nav .nav-sections .default-content-wrapper>ul>li {
+  header nav  .default-content-wrapper>ul>li {
     flex: 0 1 auto;
     position: relative;
   }
 
-  header nav .nav-sections .default-content-wrapper>ul>li>ul {
+  header nav  .default-content-wrapper>ul>li>ul {
     display: none;
     position: relative;
   }
 
-  header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul {
+  header nav  .default-content-wrapper>ul>li[aria-expanded='true']>ul {
     display: block;
     position: absolute;
     left: -24px;
@@ -272,7 +272,7 @@ header nav .nav-sections ul>li>ul>li {
     white-space: initial;
   }
 
-  header nav .nav-sections .default-content-wrapper>ul>li>ul::before {
+  header nav  .default-content-wrapper>ul>li>ul::before {
     content: '';
     position: absolute;
     top: -8px;
@@ -284,7 +284,7 @@ header nav .nav-sections ul>li>ul>li {
     border-bottom: 8px solid var(--light-color);
   }
 
-  header nav .nav-sections .default-content-wrapper>ul>li>ul>li {
+  header nav  .default-content-wrapper>ul>li>ul>li {
     padding: 8px 0;
   }
 }
