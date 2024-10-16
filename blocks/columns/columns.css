@@ -92,7 +92,6 @@
   width: 60px;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: 50%;
   height: 60px;
   margin-top: 0;
 }
