@@ -13,69 +13,68 @@
 /* eslint-disable no-console, class-methods-use-this */
 
 export default {
-    /**
-     * Apply DOM operations to the provided document and return
-     * the root element to be then transformed to Markdown.
-     * @param {HTMLDocument} document The document
-     * @param {string} url The url of the page imported
-     * @param {string} html The raw html (the document is cleaned up during preprocessing)
-     * @param {object} params Object containing some parameters given by the import process.
-     * @returns {HTMLElement} The root element to be transformed
-     */
-    transformDOM: ({
-      // eslint-disable-next-line no-unused-vars
-      document,
-      url,
-      // html,
-      params,
-    }) => {
-      // define the main element: the one that will be transformed to Markdown
-      const main = document.body;
-  
-      // attempt to remove non-content elements
-      WebImporter.DOMUtils.remove(main, [
-        'header',
-        '.header',
-        'nav',
-        '.nav',
-        'footer',
-        '.footer',
-        'iframe',
-        'noscript',
-      ]);
-  
-      WebImporter.rules.createMetadata(main, document);
-      WebImporter.rules.transformBackgroundImages(main, document);
-      WebImporter.rules.adjustImageUrls(main, url, params.originalURL);
-      WebImporter.rules.convertIcons(main, document);
-  
-      return main;
-    },
-  
-    /**
-     * Return a path that describes the document being transformed (file name, nesting...).
-     * The path is then used to create the corresponding Word document.
-     * @param {HTMLDocument} document The document
-     * @param {string} url The url of the page imported
-     * @param {string} html The raw html (the document is cleaned up during preprocessing)
-     * @param {object} params Object containing some parameters given by the import process.
-     * @return {string} The path
-     */
-    generateDocumentPath: ({
-      // eslint-disable-next-line no-unused-vars
-      document,
-      url,
-      // html,
-      // params,
-    }) => {
-      let p = new URL(url).pathname;
-      if (p.endsWith('/')) {
-        p = `${p}index`;
-      }
-      return decodeURIComponent(p)
-        .toLowerCase()
-        .replace(/\.html$/, '')
-        .replace(/[^a-z0-9/]/gm, '-');
-    },
-  };
-  
+  /**
+   * Apply DOM operations to the provided document and return
+   * the root element to be then transformed to Markdown.
+   * @param {HTMLDocument} document The document
+   * @param {string} url The url of the page imported
+   * @param {string} html The raw html (the document is cleaned up during preprocessing)
+   * @param {object} params Object containing some parameters given by the import process.
+   * @returns {HTMLElement} The root element to be transformed
+   */
+  transformDOM: ({
+    // eslint-disable-next-line no-unused-vars
+    document,
+    url,
+    // html,
+    params,
+  }) => {
+    // define the main element: the one that will be transformed to Markdown
+    const main = document.body;
+
+    // attempt to remove non-content elements
+    WebImporter.DOMUtils.remove(main, [
+      'header',
+      '.header',
+      'nav',
+      '.nav',
+      'footer',
+      '.footer',
+      'iframe',
+      'noscript',
+    ]);
+
+    WebImporter.rules.createMetadata(main, document);
+    WebImporter.rules.transformBackgroundImages(main, document);
+    WebImporter.rules.adjustImageUrls(main, url, params.originalURL);
+    WebImporter.rules.convertIcons(main, document);
+
+    return main;
+  },
+
+  /**
+   * Return a path that describes the document being transformed (file name, nesting...).
+   * The path is then used to create the corresponding Word document.
+   * @param {HTMLDocument} document The document
+   * @param {string} url The url of the page imported
+   * @param {string} html The raw html (the document is cleaned up during preprocessing)
+   * @param {object} params Object containing some parameters given by the import process.
+   * @return {string} The path
+   */
+  generateDocumentPath: ({
+    // eslint-disable-next-line no-unused-vars
+    document,
+    url,
+    // html,
+    // params,
+  }) => {
+    let p = new URL(url).pathname;
+    if (p.endsWith('/')) {
+      p = `${p}index`;
+    }
+    return decodeURIComponent(p)
+      .toLowerCase()
+      .replace(/\.html$/, '')
+      .replace(/[^a-z0-9/]/gm, '-');
+  },
+};
