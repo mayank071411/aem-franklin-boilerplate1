@@ -1,33 +1,285 @@
-.columns > div {
+.featured-main.columns-container {
+  margin: 60px 0 50px;
+}
+
+.magazine-featured .columns-container {
+  margin-top: 20px;
+}
+
+.magazine-details h1 {
+  margin-top: 0;
+  font-weight: 400;
+  font-size: var(--font-size-h1);
+  line-height: 1;
+}
+
+.featured-main .default-content-wrapper h1 {
+  font-weight: normal;
+  font-size: var(--font-size-h1);
+  margin-bottom: 0;
+  line-height: 1.5;
+  margin-top: 1em;
+}
+
+.featured-main .columns > div {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color-light);
+}
+
+.featured-main .columns img {
+  width: 100%;
+}
+
+.magazine-details .columns > div {
   display: flex;
   flex-direction: column;
 }
 
-.columns img {
-  width: 100%;
-}
-
-.columns > div > div {
-  order: 1;
-}
-
-.columns > div > .columns-img-col {
+.featured-main .columns > div > div {
   order: 0;
+  padding: 15px;
 }
 
-.columns > div > .columns-img-col img {
+.featured-main .columns > div > .columns-img-col {
+  order: 1;
+  padding: 0;
+}
+
+.magazine-details .columns h3 {
+  margin: 0 0 40px;
+  font-size: var(--body-font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: var(--body-font-family);
+  line-height: 1;
+}
+
+.magazine-details .columns h2 {
+  font-size: var(--font-size-h3);
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.featured-main .columns > div > div > h2:first-child {
+  font-size: var(--body-font-size-s);
+  font-weight: 700;
+  color: var(--background-color-hf);
+  font-family: var(--body-font-family);
+  margin-bottom: 45px;
+}
+
+.featured-main .columns > div > div > h2:nth-child(2) {
+  font-size: var(--font-size-h3);
+  font-weight: normal;
+  color: var(--background-color-hf);
+  line-height: 1.5;
+}
+
+.featured-main .columns > div > div > p {
+  line-height: 1.75;
+  font-size: var(--body-font-size-xs);
+  margin-bottom: 0;
+}
+
+.magazine-details .columns img {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.magazine-details .columns .columns-img-col img {
+  width: 60px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 50%;
+  height: 60px;
+  margin-top: 0;
+}
+
+.featured-main .columns > div > .columns-img-col img {
   display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (width >= 768px) {
+  .featured-main .default-content-wrapper h1 {
+    margin-top: 0;
+  }
 }
 
 @media (width >= 900px) {
-  .columns > div {
+  .featured-main .columns > div {
     align-items: center;
     flex-direction: unset;
-    gap: 24px;
+    gap: 0;
   }
 
-  .columns > div > div {
+  .magazine-details .columns > div {
+    flex-direction: unset;
+    gap: 60px;
+  }
+  
+  .featured-main .columns > div > div {
+    flex: 1;
+    order: unset;
+    padding: 20px 30px;
+  }
+
+  .featured-main .columns > div > .columns-img-col {
+    order: 0;
+  }
+
+  .featured-main .columns > div > .columns-img-col img {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    height: 510px;
+  }
+
+  .featured-main .columns > div > div > h2:first-child {
+    font-size: var(--body-font-size-m);
+  }
+  
+  .featured-main .columns > div > div > h2:nth-child(2) {
+    font-size: var(--font-size-h3);
+  }
+
+  .magazine-details .columns > div > div {
     flex: 1;
     order: unset;
   }
+  
+  .magazine-details .columns > div > div:nth-child(1) {
+    flex: 3;
+    order: unset;
+  }
+}
+
+@media (width >= 1120px) {
+  .featured-main .columns > div > .columns-img-col {
+    flex: 2;
+  }
+
+  .featured-main .columns > div > .columns-img-col img {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    height: 510px;
+  }
+}
+
+.magazine-details .columns h6 {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+.magazine-details .columns h2::after {
+  content: "";
+  display: block;
+  padding-top: 8px;
+  width: 84px;
+  border-bottom: 2px solid var(--brand-primary-color);
+}
+
+.magazine-details .columns > div > div > p {
+  font-size: var(--body-font-size-m);
+  font-weight: normal;
+  line-height: 2.5;
+  margin: 0;
+  text-align: justify;
+}
+
+.magazine-details .columns > div > div {
+  order: 1;
+}
+
+.magazine-details .columns > div > .columns-img-col {
+  order: 0;
+}
+
+.magazine-details .columns > div > .columns-img-col img {
+  display: block;
+  margin-top: 40px;
+}
+
+.magazine-details .columns h4 {
+  font-size: var(--font-size-h4);
+  margin-bottom: .25rem;
+  margin-top: 0;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.magazine-details .columns h5 {
+  color: dimgray;
+  font-size: var(--body-font-size-sm);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: var(--body-font-family);
+}
+
+.magazine-details .columns .columns-img-col ~ div p a {
+  background-color: var(--background-color-hf);
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.magazine-details .columns .columns-img-col ~ div p a img {
+  margin-top: 0;
+}
+
+.magazine-details .columns .columns-img-col + div {
+  flex: 2;
+  margin-top: 40px;
+}
+
+.magazine-details .columns > div > div:nth-child(1).columns-img-col {
+  flex: 1;
+  max-width: max-content;
+}
+
+.magazine-details .columns > div > div:nth-child(2) p {
+  border-left: 5px solid var(--background-color-light);
+  padding: .5rem 1rem;
+  height: 90pt;
+  margin-bottom: 15px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.magazine-details .columns > div > div:nth-child(2) p:hover {
+  border-color: var(--background-color-hf);
+  background-color: var(--brand-primary-color);
+}
+
+.magazine-details .columns > div > div:nth-child(2) p a:first-child {
+  color: var(--background-color-hf);
+  padding: 5px;
+  text-transform: uppercase;
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  text-decoration: none;
+  display: block;
+  line-height: 28px;
+}
+
+.magazine-details .columns > div > div:nth-child(2) p a:last-child {
+  color: dimgray;
+  text-decoration: none;
+  padding: 5px;
+  text-transform: uppercase;
+  font-size: var(--body-font-size-sm);
+  font-weight: 400;
+  line-height: 5px;
+  display: block;
 }
