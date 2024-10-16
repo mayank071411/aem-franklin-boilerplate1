@@ -1,4 +1,4 @@
-import createTag from './tag.js';
+import createTag from './tag';
 
 /**
  * * @param {HTMLElement} element the element with the parent undesired wrapper, like <p></p>

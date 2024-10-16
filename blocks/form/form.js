@@ -1,4 +1,4 @@
-import { addInViewAnimationToSingleElement } from '../../utils/helpers.js';
+import { addInViewAnimationToSingleElement } from '../../utils/helper';
 
 function createSelect(fd) {
   const select = document.createElement('select');
