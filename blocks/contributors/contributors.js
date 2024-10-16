@@ -7,8 +7,8 @@ export default function decorate(block) {
     const li = document.createElement('li');
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
-      if (div.children.length === 1 && div.querySelector('picture')) div.className = 'contributors-list-image';
-      else div.className = 'contributors-list-body';
+      if (div.children.length === 1 && div.querySelector('picture')) div.className = 'contributors-image';
+      else div.className = 'contributors-body';
     });
     ul.append(li);
   });
