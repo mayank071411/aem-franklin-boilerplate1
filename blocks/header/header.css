@@ -177,11 +177,17 @@ header nav .nav-brand img {
 }
 
 /* sections */
-header nav  {
+header nav .nav-sections {
   grid-area: sections;
   flex: 1 1 auto;
   display: none;
   visibility: hidden;
+}
+
+header nav[aria-expanded='true'] .nav-sections {
+  display: block;
+  visibility: visible;
+  align-self: start;
 }
 
 header nav  ul {
