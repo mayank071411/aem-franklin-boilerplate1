@@ -1,7 +1,6 @@
 import createField from './form-fields.js';
 
 async function createForm(formHref, submitHref) {
-  debugger
   const { pathname } = new URL(formHref);
   const resp = await fetch(pathname);
   const json = await resp.json();
@@ -90,7 +89,7 @@ export default async function decorate(block) {
   // const submitLink = links.find((link) => link !== formLink);
   if (!formLink) return;
 
-  const form = await createForm(formLink, submitLink);
+  const form = await createForm(formLink, "submitLink");
   block.replaceChildren(form);
 
   form.addEventListener('submit', (e) => {
