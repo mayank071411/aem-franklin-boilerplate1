@@ -262,7 +262,7 @@ main>.section>div {
 }
 
 main>.section:first-of-type {
-  margin-top: 180px;
+  margin-top: 220px;
 }
 
 @media (width >=900px) {
