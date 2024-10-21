@@ -41,8 +41,13 @@ footer .button-container .icon-wknd-logo-light img {
 footer .columns ul {
   display: flex;
   list-style: none;
-  margin: 0;
+  margin: 20px 0 0;
   padding: 0;
+  flex-direction: column;
+}
+
+footer .columns ul li {
+  margin-bottom: 15px;
 }
 
 footer .columns h5 {
@@ -52,16 +57,20 @@ footer .columns h5 {
   margin: 0 15px 0 0;
 }
 
-footer .footer>div {
+footer .footer > div {
   margin: auto;
   max-width: 1200px;
   padding: 40px 24px 24px;
 }
 
-footer .columns.columns-3-cols>div>div:nth-child(3) {
+footer .columns > div {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .columns.columns-3-cols > div > div:nth-child(3) {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 footer .columns p.button-container {
@@ -86,12 +95,36 @@ footer .section .default-content-wrapper p a {
   text-decoration: underline;
 }
 
-@media (width >=900px) {
-  footer .footer>div {
+@media (width >= 900px) {
+  footer .footer > div {
     padding: 40px 32px 24px;
   }
 
-  .columns>div>div:nth-child(1) {
+  footer .columns > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 24px;
+  }
+  
+  footer .columns > div > div {
+    flex: 1;
+    order: unset;
+  }
+
+  footer .columns > div > div:nth-child(1) {
     flex: 0;
+  }
+
+  footer .columns ul {
+    flex-direction: row;
+    margin: 0;
+  }
+
+  footer .columns ul li {
+    margin-bottom: 0;
+  }
+
+  footer .columns.columns-3-cols > div > div:nth-child(3) {
+    justify-content: center;
   }
 }
