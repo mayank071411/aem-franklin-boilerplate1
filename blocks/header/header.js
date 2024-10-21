@@ -124,7 +124,6 @@ export default async function decorate(block) {
     const section = nav.children[i];
     if (section) section.classList.add(`nav-${c}`);
   });
-
   const navBrand = nav.querySelector('.nav-brand');
   const brandLink = navBrand.querySelector('.button');
   if (brandLink) {
@@ -134,7 +133,17 @@ export default async function decorate(block) {
 
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
+    const currentUrl = window.location.pathname;
+
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
+      const navLink = navSection.querySelector('a');
+      if (navLink) {
+        // Check if the link's href matches the current URL
+        const linkUrl = new URL(navLink.href, window.location.origin).pathname;
+        if (currentUrl === linkUrl) {
+          navSection.classList.add('active');
+        }
+      }
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
       navSection.addEventListener('click', () => {
         if (isDesktop.matches) {
@@ -166,4 +175,13 @@ export default async function decorate(block) {
 
   const signInWrapper = nav.querySelector('.nav-sign-in');
   block.prepend(signInWrapper);
+
+  // Add scroll event listener to handle the fixed-nav class
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+      navWrapper.classList.add('fixed-nav');
+    } else {
+      navWrapper.classList.remove('fixed-nav');
+    }
+  });
 }
