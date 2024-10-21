@@ -76,7 +76,6 @@ footer .columns.columns-3-cols > div > div:nth-child(3) {
 footer .columns p.button-container {
   background-color: var(--text-color-hf);
   padding: 0px 10px;
-  margin: 0 0 0 15px;
 }
 
 footer .columns p.button-container a img {

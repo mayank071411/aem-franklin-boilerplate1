@@ -21,6 +21,7 @@
   --text-color-hf: #ebebeb;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
+  --brand-primary-color: #ffea00;
 
   /* fonts */
   --heading-font-family: "Asar", georgia, "Times New Roman", times, serif;
@@ -204,7 +205,7 @@ button {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
+  background-color: var(--brand-primary-color);
   color: var(--background-color);
   cursor: pointer;
   overflow: hidden;
@@ -216,7 +217,7 @@ a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--link-hover-color);
+  background-color: var(--brand-primary-color);
   cursor: pointer;
 }
 
