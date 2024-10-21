@@ -105,6 +105,7 @@ footer .section .default-content-wrapper p a {
     align-items: center;
     flex-direction: unset;
     gap: 24px;
+    background-color: var(--background-color-hf);
   }
   
   footer .columns > div > div {
