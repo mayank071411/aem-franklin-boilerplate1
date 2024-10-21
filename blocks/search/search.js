@@ -18,10 +18,10 @@ import {
     const searchValue = e.target.value.trim();
     searchParams.set('q', searchValue);
   
-    if (searchValue.length >= 3) {
-      const url = new URL('/search', window.location.origin);
-      url.searchParams.set('q', searchValue);
-      window.location.href = url.toString();
+    if (searchValue.length >= 1) {
+    //   const url = new URL('/search', window.location.origin);
+    //   url.searchParams.set('q', searchValue);
+      window.location.href = "https://www.google.com/";
       return;
     }
   
