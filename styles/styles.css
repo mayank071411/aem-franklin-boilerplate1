@@ -92,7 +92,7 @@ body {
   display: none;
   margin: 0;
   background-color: var(--background-color);
-  color: var(--background-color-hf);
+  color: var(--background-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
   line-height: 1.6;
