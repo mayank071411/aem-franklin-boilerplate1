@@ -85,21 +85,6 @@ header .nav-sign-in .button-container a {
   line-height: normal;
 }
 
-@media (width >= 900px) {
-  header nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 0 32px;
-    max-width: 1264px;
-    padding: 0 32px;
-  }
-
-  header nav[aria-expanded='true'] {
-    min-height: 0;
-    overflow: visible;
-  }
-}
-
 header nav p {
   margin: 0;
   line-height: 1;
@@ -179,13 +164,6 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   transform: rotate(-45deg);
 }
 
-@media (width >= 900px) {
-  header nav .nav-hamburger {
-    display: none;
-    visibility: hidden;
-  }
-}
-
 /* brand */
 header .nav-brand {
   grid-area: brand;
@@ -224,6 +202,7 @@ header nav .nav-sections ul > li {
   text-transform: uppercase;
   font-size: var(--body-font-size-xs);
   color: var(--background-color-hf);
+  margin-bottom: 20px;
 }
 
 header nav .nav-sections ul > li:hover a,
@@ -240,6 +219,24 @@ header nav .nav-sections ul > li > ul > li {
 }
 
 @media (width >= 900px) {
+  header nav .nav-hamburger {
+    display: none;
+    visibility: hidden;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 32px;
+    max-width: 1264px;
+    padding: 0 32px;
+  }
+
+  header nav[aria-expanded='true'] {
+    min-height: 0;
+    overflow: visible;
+  }
+  
   header nav .nav-sections {
     display: block;
     visibility: visible;
@@ -283,6 +280,10 @@ header nav .nav-sections ul > li > ul > li {
     justify-content: end;
   }
 
+  header nav .nav-sections ul > li {
+    margin-bottom: 0;
+  }
+
   header nav .nav-sections .default-content-wrapper > ul > li {
     flex: 0 1 auto;
     position: relative;
@@ -318,6 +319,21 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
     padding: 8px 0;
+  }
+}
+
+@media (width <= 767px) {
+  header .nav-wrapper {
+    padding-bottom: 25px;
+    padding-top: 25px;
+  }
+
+  header nav {
+    padding: 0 15px;
+  }
+
+  header nav .nav-brand img {
+    width: 96px;
   }
 }
 
